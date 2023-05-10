@@ -1,0 +1,25 @@
+/* Coolors Exported Palette - https://coolors.co/44355b-31263e-221e22-eca72c-ee5622 */
+
+/* CSV */
+44355b,31263e,221e22,eca72c,ee5622
+
+/* With # */
+#44355b, #31263e, #221e22, #eca72c, #ee5622
+
+/* Array */
+["44355b","31263e","221e22","eca72c","ee5622"]
+
+/* Object */
+{"English Violet":"44355b","Dark purple":"31263e","Raisin black":"221e22","Hunyadi yellow":"eca72c","Flame":"ee5622"}
+
+/* Extended Array */
+[{"name":"English Violet","hex":"44355b","rgb":[68,53,91],"cmyk":[25,42,0,64],"hsb":[264,42,36],"hsl":[264,26,28],"lab":[25,16,-20]},{"name":"Dark purple","hex":"31263e","rgb":[49,38,62],"cmyk":[21,39,0,76],"hsb":[268,39,24],"hsl":[268,24,20],"lab":[17,11,-13]},{"name":"Raisin black","hex":"221e22","rgb":[34,30,34],"cmyk":[0,12,0,87],"hsb":[300,12,13],"hsl":[300,6,13],"lab":[12,3,-2]},{"name":"Hunyadi yellow","hex":"eca72c","rgb":[236,167,44],"cmyk":[0,29,81,7],"hsb":[38,81,93],"hsl":[38,83,55],"lab":[73,16,68]},{"name":"Flame","hex":"ee5622","rgb":[238,86,34],"cmyk":[0,64,86,7],"hsb":[15,86,93],"hsl":[15,86,53],"lab":[57,56,58]}]
+
+/* XML */
+<palette>
+  <color name="English Violet" hex="44355b" r="68" g="53" b="91" />
+  <color name="Dark purple" hex="31263e" r="49" g="38" b="62" />
+  <color name="Raisin black" hex="221e22" r="34" g="30" b="34" />
+  <color name="Hunyadi yellow" hex="eca72c" r="236" g="167" b="44" />
+  <color name="Flame" hex="ee5622" r="238" g="86" b="34" />
+</palette>
