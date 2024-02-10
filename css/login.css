@@ -230,3 +230,29 @@ label a:hover{
     color: #2A6FB5;
 }
 
+
+
+/*MEDIA QUERIES*/
+/*MEDIA QUERIES*/
+/*MEDIA QUERIES*/
+
+
+@media (max-width: 670px) {
+    .login-contents {
+        width: 45%;
+    }
+} 
+
+@media (max-width: 450px) {
+    .login-contents {
+        width: 65%;
+    }
+} 
+
+@media (max-width: 280px) {
+    .login-contents {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+} 
