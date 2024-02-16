@@ -28,6 +28,7 @@ li{
 }
 
 
+
 .login-container{
     position: relative;
     width: 100%;
@@ -36,6 +37,8 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
+
+
 }
 
 .login-contents{
@@ -54,6 +57,7 @@ li{
     row-gap: 0.5rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 .error-text{
     color: #721c24;
@@ -229,4 +233,55 @@ label a:hover{
 .sign a{
     color: #2A6FB5;
 }
+@media (min-width: 671px){
+    .header h2{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
 
+@media (max-width: 670px) {
+    .login-contents {
+        min-width: 300px;
+        width: 45%;
+    }
+    .header h2 {
+        text-align: center;
+    }
+} 
+
+@media (max-width: 450px) {    
+    .login-contents {
+        min-width: 200px;
+        width: 65%;
+    }
+    .header h2 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .sign {
+        flex-direction: row;
+    }
+    .cta{
+        margin-top: 5%;
+    }
+} 
+
+@media (max-width: 200px) {
+    .login-contents {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        min-width: 100%;
+    }
+    .header h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .sign {
+        flex-direction: column;
+    }
+    .cta{
+        margin-top: 9%;
+    }
+} 
