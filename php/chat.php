@@ -37,7 +37,6 @@ $user_data = check_login($con);
             }
             ?>
 
-
             <div id="tutorial" class="tutorial">
                 <div class="tuto intro">
                     <div class="img_container">
@@ -125,17 +124,17 @@ $user_data = check_login($con);
                             </div>
                         </div>
 
-                        <!-- <div class="block_b">
+                        <div class="block_b">
                             <div class="block_img">
                                 <i id="block_icon" class="fa-solid fa-gear" title="Settings"></i>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
 
                     <div class="item bottom">
                         <div class="block_profile">
                             <div class="user_img">
-                                <img src="../php/images/<?php echo $row['img'] ?>" class="user_avatar" alt="<?php echo $row['user_name'] ?>" title="<?php echo $row['user_name'] ?>">
+                                <img src="../images/users/<?php echo $row['img'] ?>" class="user_avatar" alt="<?php echo $row['user_name'] ?>" title="<?php echo $row['user_name'] ?>">
                             </div>
                         </div>
 
@@ -161,6 +160,7 @@ $user_data = check_login($con);
                         </div>
                     </header>
                     <div class="bot_list">
+                        
                     </div>
                 </div>
 
@@ -170,16 +170,16 @@ $user_data = check_login($con);
                         <div class="header">
                             <div class="image_text">
                                 <div class="bot_img">
-                                    <img src="../php/images/<?php echo $row['bot_img'] ?>" class="bot_avatar">
+                                    <img src="../images/bot/<?php echo $row['bot_img'] ?>" class="bot_avatar">
                                 </div>
                                 <div class="bot_name">
                                     <h4>You're talking to <?php echo $row['bot_name'] ?></h4>
                                 </div>
                             </div>
-<!-- 
+
                             <div class="nav_icon">
                                 <i id="menu" class="fa-solid fa-ellipsis-vertical"></i>
-                            </div> -->
+                            </div>
                         </div>
 
                         <div class="transition">
@@ -190,8 +190,8 @@ $user_data = check_login($con);
                             <div class="chatbot">
                                 <form action="../php/chat.php?bot_id=<?php echo $botId ?>" class="forms" autocomplete="off">
                                     <div class="input-field">
-                                        <input type="text" class="outgoing_id" name="outgoing_id" value="<?php echo $_SESSION['user_id']; ?>" hidden>
-                                        <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $botId; ?>" hidden>
+                                        <input type="text" class="outgoing_id" name="user_outgoing_id" value="<?php echo $_SESSION['user_id']; ?>" hidden>
+                                        <input type="text" class="incoming_id" name="bot_incoming_id" value="<?php echo $botId; ?>" hidden>
                                         <input id="input" class="input_text" type="text" name="message" placeholder="Type a message here..." title="Send" autocomplete="off">
                                         <button class="submit">
                                             <i id="send" class="fa-solid fa-paper-plane"></i>

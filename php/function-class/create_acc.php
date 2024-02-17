@@ -42,7 +42,7 @@ if (isset($_POST['signup'])) {
                 if (in_array($img_type, $types) === true) {
                     $time = time();
                     $new_img_name = $time . $img_name;
-                    if (move_uploaded_file($tmp_name, "images/" . $new_img_name)) {
+                    if (move_uploaded_file($tmp_name, "../images/users/" . $new_img_name)) {
                         $user_id = random_num(20);
                         $encpass = password_hash($password, PASSWORD_BCRYPT);
                         $code = rand(999999, 111111);

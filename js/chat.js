@@ -55,8 +55,6 @@ xhr.onload = () => {
 }
 xhr.send();
 
-
-
 //chat function
 const form = document.querySelector(".forms"),
   incoming_id = form.querySelector(".incoming_id").value,
@@ -71,54 +69,51 @@ form.onsubmit = (e) => {
 
 sendBtn.onclick = () => {
 
-  if(inputField.value){
-    const message = `
-        <div class="message my_message">
-          <p>  ${input.value} </p>
-        </div>
-    `
-    chatBox.innerHTML += message
-    scrollToBottom();
-    bot()
-    input.value = null
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../php/function-class/insert_chat.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        inputField.value = "";
+        // bot();
+        scrollToBottom();
+      }
+    }
+  }
+
+  let formData = new FormData(form);
+  xhr.send(formData);
+
 }
+
+chatBox.onmouseenter = () => {
+  chatBox.classList.add("active");
 }
+
+chatBox.onmouseleave = () => {
+  chatBox.classList.remove("active");
+}
+
+setInterval(() => {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../php/function-class/get_chat.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+        chatBox.innerHTML = data;
+        if (!chatBox.classList.contains("active")) {
+          scrollToBottom();
+        }
+      }
+    }
+  }
+  let formData = new FormData(form);
+  xhr.send(formData);
+}, 500);
 
 function scrollToBottom() {
   chatBox.scrollTop = chatBox.scrollHeight;
-}
-
-function bot() {
-  var http = new XMLHttpRequest()
-  var data = new FormData()
-  data.append('prompt', input.value)
-  http.open('POST', '../request.php', true)
-  http.send(data)
-  setTimeout(() => {
-    chatBox.innerHTML += `
-          <div class="bot_message response">
-              <div class="pre-img">
-                  <img class = "preload" src="../images/preload.gif" alt="preloader">
-              </div>
-          </div>
-      `
-    scrollToBottom();
-  }, 1000);
-
-  http.onload = () => {
-    var response = JSON.parse(http.response)
-    var replyText = processResponse(response.choices[0].text)
-    var replyContainer = document.querySelectorAll('.response')
-    replyContainer[replyContainer.length - 1].querySelector('div').innerHTML = replyText
-    scrollToBottom();
-  }
-}
-
-function processResponse(res) {
-  var arr = res.split(':')
-  return arr[arr.length - 1]
-    .replace(/(\r\n|\r|\n)/gm, '')
-    .trim()
 }
 
 //tutorial card
