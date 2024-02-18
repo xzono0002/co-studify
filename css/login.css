@@ -10,7 +10,24 @@ body{
     min-height: 100vh;
     background: #2A6FB5;
 }
-
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo-container{
+    
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-container__img {
+    margin: 17%;
+    height: 30vh;
+    width: 30vh;
+}
 a{
     text-decoration: none;
 }
@@ -29,6 +46,7 @@ li{
 
 
 
+
 .login-container{
     position: relative;
     width: 100%;
@@ -37,17 +55,17 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
+
 .login-contents{
+    
     position: relative;
     width: 30%;
-    padding: 2%;
+    padding: 5%;
     border-style: solid;
     border-width: 1%;
-    border-radius: 5px;
+    border-radius: 13px;
     border-color: #2A6FB5;
     background-color: #fff;
     display: flex;
@@ -234,55 +252,97 @@ label a:hover{
     color: #2A6FB5;
 }
 
-@media (min-width: 671px){
-    .header h2{
-        font-size: 2.5rem;
-        text-align: center;
-    }
-}
-
-@media (max-width: 670px) {
-    .login-contents {
-        min-width: 300px;
-        width: 45%;
-    }
-    .header h2 {
-        text-align: center;
-    }
-} 
-
-@media (max-width: 450px) {    
-    .login-contents {
-        min-width: 200px;
-        width: 65%;
-    }
-    .header h2 {
-        text-align: center;
-        font-size: 1.8rem;
-    }
-    .sign {
+/*desktop resolution (4:3, 16:9)*/
+@media (min-width: 1000px){
+    main {
+        display: flex;        
         flex-direction: row;
+        height: 100vh;
     }
-    .cta{
-        margin-top: 5%;
+    .login-container {
+        max-height: 95vh;
+        min-width: 450px;
+        max-width: 30vw;
     }
-} 
-
-@media (max-width: 200px) {
     .login-contents {
         width: 100%;
         height: 100%;
-        padding: 10px;
-        min-width: 100%;
+    }    
+    .logo-container__img{
+        height: 40vh;
+        width: 35vh;
     }
-    .header h2 {
-        text-align: center;
-        font-size: 1.5rem;
+    .header h2{
+        font-size: 2.2vw;
     }
-    .sign {
+}
+
+
+/*tablet resolution (3:4)*/
+@media (min-width: 670px) and (max-width: 999px){
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;        
         flex-direction: column;
     }
-    .cta{
-        margin-top: 9%;
+    .login-container {
+        max-height: 50vh;
+        max-width: 630px;
     }
+    .login-contents {
+        width: 100%;
+        height: 100%;
+    }    
+    .logo-container__img{
+        height: 45vh;
+        width: 40vh;
+    }
+    .header h2{
+        font-size: 2.5rem;
+    }
+} 
+/*phone resolutions (9:16)*/
+@media (min-width: 450px) and (max-width: 669px) {    
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        flex-direction: column;
+    }
+    .login-container {
+        max-height: 47vh;
+        max-width: 95vw;
+    }
+    .login-contents {
+        width: 100%;
+        height: 100%;
+    }    
+    .logo-container__img{
+        height: 40vh;
+        width: 40vh;
+    }
+    .header h2{
+        font-size: 2.2rem;
+    }
+} 
+
+@media (min-width: 320px ) and (max-width: 449px) {
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        flex-direction: column;
+    }
+    .login-container {
+        max-height: 50vh;
+        max-width: 95vw;
+    }
+    .login-contents {
+        width: 100%;
+        height: 100%;
+    }   
+    .header h2{
+        font-size: 1.7rem;
+    }    
 } 
