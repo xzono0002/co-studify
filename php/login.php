@@ -20,6 +20,12 @@ require_once "../php/function-class/login_acc.php";
 
 <body>
     <main>
+        <div class="logo-container">
+            <!--Pls change the logo here with the official logo -->
+            <img class = "logo-container__img" src="../images/chatbot.png">            
+        </div> 
+
+
         <section class="login-container">
             <form class="login-contents" action="../php/login.php" enctype="multipart/form-data" method="post" autocomplete="">
 
