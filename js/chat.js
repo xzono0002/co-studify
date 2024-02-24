@@ -170,3 +170,24 @@ function updateNavigationButtons(cardIndex) {
   });
 
 }
+
+function showSidebar()
+  {
+    const sideBar = document.querySelector(".nav_menu")
+    sideBar.style.display = 'flex'
+  }
+function showSidebar1()
+{
+  const sideBar = document.querySelector(".menu")
+  const sideBar1 = document.querySelector(".nav_menu")
+  sideBar.style.display = 'flex'
+  sideBar1.style.display = 'flex'
+}
+function onHidebar()
+  {
+    const sideBar = document.querySelector(".menu")
+    sideBar.style.display = '';
+    const sideBar1 = document.querySelector(".nav_menu")
+    sideBar1.style.display = '';
+  }
+

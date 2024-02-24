@@ -1,6 +1,6 @@
 <?php
 
-    $dbhost = "localhost:3308";
+    $dbhost = "localhost:3306";
     $dbuser = "root";
     $dbpass = "";
     $dbname = "kaagapai";

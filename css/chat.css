@@ -40,6 +40,15 @@ a {
   margin: 0 auto;
   padding: 0;
 }
+  .nav_wrapper nav {
+    display: flex;
+    justify-content: row;
+    justify-content: space-between;
+  }
+  .nav_wrapper nav > a {
+    padding: 10px;
+    display: none;
+  }
 
 .logo {
   font-weight: 500;
@@ -156,6 +165,7 @@ a {
 /* nav_menu */
 /* nav_menu */
 .nav_menu {
+  display: flex;
   position: relative;
   height: 100%;
   padding: 0 10px 10px;
@@ -595,4 +605,91 @@ img{
 
 .preload{
   width: 4rem;
+}
+
+.menu .menu-icon {
+  display: none;
+}
+  .menu-icon > .block_a {
+    padding: 20px;
+  }
+    .menu-icon > .block_a > .block_img {
+      padding: 10px;
+    }
+
+
+
+/* @Medaia Queries */
+
+/* execute when screen size is equal or greater than 681px */
+@media screen and (min-width:681px){
+    .nav_menu {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+/* execute when screen size is equal to or smaller than 680px */
+@media screen and (max-width:680px){
+  .nav_menu {
+    display:none;
+    flex-direction: column;
+    background-color: #0C1E32;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav_wrapper nav > a {
+    display: flex;
+    padding: 10px;
+  }
+
+  .menu .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bottom {
+    position: relative;
+  }
+
+  .bot_name h4{
+    font-size: 0.85rem;
+  }
+}
+
+/* execute when screen size is equal to or higher than 681px */
+@media screen and (min-width:481px) {
+  .bot_nav {
+    display: none;
+  }
+}
+
+/* execute when screen size is equal to or smaller than 480px */
+@media screen and (max-width:480px) {
+  .menu{
+    display: none;
+    position: relative;
+    bottom: 0%;
+  }
+  .nav_menu{
+    position:relative
+  }
+  .bot_nav {
+    display: flex;
+    padding: 15px;
+  }
+  .image_text{
+    margin-left: 0px ;
+  }
+  .block_a {
+    display: none;
+  }
 }

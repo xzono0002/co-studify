@@ -1,4 +1,6 @@
 <?php
+echo "<link rel='stylesheet' type='text/css' href='../css/chat.css'>";
+
     session_start();
     include_once "connection.php";
 
