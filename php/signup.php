@@ -25,8 +25,9 @@ require_once "../php/function-class/create_acc.php";
 
                 <div class="header">
                     <h2>Create Account</h2>
+                    <h1>kaagapAI</h1>
                 </div>
-
+                
                 <?php
                 if (count($errors) == 1) {
                 ?>
