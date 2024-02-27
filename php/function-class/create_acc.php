@@ -14,6 +14,28 @@ if (isset($_POST['signup'])) {
     $email = mysqli_real_escape_string($con, $_POST['mail']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $confirm_pass = mysqli_real_escape_string($con, $_POST['confirm_pass']);
+    $splitpass = str_split($password);
+
+    $haslowercase = false;
+    $hasuppercase = false;
+
+    foreach ($splitpass as $char){
+        if ($char == strtolower($char)){
+            $haslowercase = true;
+        }
+        if ($char != strtolower($char)){
+            $hasuppercase = true;
+        }
+    }
+    if(!$haslowercase){
+        $errors['password'] = "A password must have lower case character.";
+    }
+    if(!$hasuppercase){
+        $errors['password'] = "A password must have upper case character.";
+    }
+    if (!(preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password))){
+        $errors['password'] = "A password must have special character.";  
+    }
     if ($password !== $confirm_pass) {
         $errors['password'] = "Confirm password not matched!";
     }
