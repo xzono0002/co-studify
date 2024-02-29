@@ -109,8 +109,15 @@ $user_data = check_login($con);
             </div>
 
             <div id="wrapper" class="wrapper">
-
                 <div class="menu">
+                    <div class="menu-icon">
+                        <div class="block_a">
+                            <div class="block_img">
+                                <a onclick=showSidebar() href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="#BAC6D1"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="item navigation">
                         <div class="block_b">
                             <div class="block_img">
@@ -151,11 +158,13 @@ $user_data = check_login($con);
                         </div>
                     </div>
                 </div>
+                
                 <div class="nav_menu">
                     <header class="nav">
                         <div class="nav_wrapper">
                             <nav>
                                 <h3 class="logo">Chats</h3>
+                                <a onclick=onHidebar() href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="#BAC6D1"/></svg></a>
                             </nav>
                         </div>
                     </header>
@@ -168,6 +177,9 @@ $user_data = check_login($con);
                     <div id="chat_container" class="chat-container">
 
                         <div class="header">
+                            <div class="bot_nav">
+                                    <a onclick=showSidebar1() href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="#BAC6D1"/></svg></a>
+                                </div>
                             <div class="image_text">
                                 <div class="bot_img">
                                     <img src="../images/bot/<?php echo $row['bot_img'] ?>" class="bot_avatar">
@@ -203,6 +215,7 @@ $user_data = check_login($con);
                     </div>
                 </div>
             </div>
+
         </section>
     </main>
 
