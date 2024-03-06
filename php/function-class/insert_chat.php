@@ -28,7 +28,7 @@
             $prompt = $personalities[$incoming_id] . $message;
     
             // Call the OpenAI API to get the chatbot's response.
-            $api_key = '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'; 
+            $api_key = ''; //insert API key 
             $open_ai = new OpenAi($api_key);
 
             $parameters = [
