@@ -19,12 +19,23 @@ require_once "../php/function-class/login_acc.php";
 </head>
 
 <body>
-    <main>
+    <p class = "link-back">
+        
+        <a href = "onboarding.php"> 
+            <label> &#8592; Back to Home Screen</label>
+        </a>
+    </p>
+    <main>        
+        <div class="logo-container">
+            <!--Pls change the logo here with the official logo -->
+            <img class = "logo-container__img" src="../images/chatbot.png">            
+        </div> 
         <section class="login-container">
             <form class="login-contents" action="../php/login.php" enctype="multipart/form-data" method="post" autocomplete="">
 
                 <div class="header">
-                    <h2>Login to kaagapAI</h2>
+                    <h2>Login to</h2>
+                    <h1>kaagapAI</h1>
                 </div>
 
                 <?php

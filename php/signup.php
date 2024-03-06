@@ -13,7 +13,7 @@ require_once "../php/function-class/create_acc.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/signup.css">
     <link rel="icon" type="image/x-icon" href="../images/fav.ico">
     <title>kaagapAI</title>
 </head>
@@ -25,8 +25,9 @@ require_once "../php/function-class/create_acc.php";
 
                 <div class="header">
                     <h2>Create Account</h2>
+                    <h1>kaagapAI</h1>
                 </div>
-
+                
                 <?php
                 if (count($errors) == 1) {
                 ?>
