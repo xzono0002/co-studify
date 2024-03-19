@@ -8,7 +8,7 @@
 
 body{
     min-height: 100vh;
-    background-color: #082445;
+    background-color: #0b1725;
 }
 main{
     display: flex;
@@ -18,7 +18,7 @@ main{
 }
 .logo-container{
     border-radius: 5px 0px 0px 5px ;
-    background-color: #0C1E32;
+    background-color: #0b1725;
     height: 90vh;
     margin-left: 2%;
     width: 70%;
@@ -68,9 +68,12 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
-
+.header h2 {
+    color: #96bade;
+}
 
 .header h1{
     font-family: 'Poppins';
@@ -94,12 +97,13 @@ li{
 
 
 .login-contents{
-    
-    border-radius: 0px 5px 5px 0px ;
+    transition: 0.5s;
+    border-radius: 5px;
     position: relative;
     width: 30%;
     padding: 5%;
-    background-color: #0C1E32;
+    background-color: #06223f;
+    box-shadow: 0px 0px 1px #215b94;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,6 +111,9 @@ li{
     row-gap: 1.5rem;
 }
 
+.login-contents:hover {
+    box-shadow: 0px 0px 2px #215b94;
+}
 
 .error-text{
     color: #721c24;
