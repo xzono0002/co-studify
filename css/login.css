@@ -53,7 +53,7 @@ li{
     font-size: 12pt;
 }
 .link-back a label {
-    color: white;
+    color: #96bade;
     transition: 1s;
 }
 
@@ -245,14 +245,15 @@ label a:hover{
     width: 100%;
     height: 45px;
     background: #195794;
-    color: #F5EE33;
+    color: #96cbff;
     outline: none;
     border: none;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: bolder;
     letter-spacing: 0.2rem;
     font-size: 0.8rem;
     transition: all 0.3s ease;
+
 }
 
 .cta:hover{
@@ -290,6 +291,9 @@ label a:hover{
     padding: 0 0.3rem;
     font-size: 0.8rem;
     margin-bottom: 0;
+}
+.create:hover{
+    color:#96bade;
 }
 
 .sign a{
