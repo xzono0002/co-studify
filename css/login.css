@@ -3,13 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: #0C1E32;
+    color: #F5EE33;
 }
 
 body{
     min-height: 100vh;
-    background-image: url("../images/blocks.png");
-    background-color: #2A6FB5;
+    background-color: #0b1725;
 }
 main{
     display: flex;
@@ -19,7 +18,7 @@ main{
 }
 .logo-container{
     border-radius: 5px 0px 0px 5px ;
-    background-color: white;
+    background-color: #0b1725;
     height: 90vh;
     margin-left: 2%;
     width: 70%;
@@ -54,7 +53,7 @@ li{
     font-size: 12pt;
 }
 .link-back a label {
-    color: white;
+    color: #96bade;
     transition: 1s;
 }
 
@@ -69,18 +68,22 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
+.header h2 {
+    color: #96bade;
+}
 
 .header h1{
     font-family: 'Poppins';
     font-size: 40pt;
-    color: #2A6FB5;
+    color: #F5EE33;
      font-weight: bold;
 }
 
 .login-container{
-    background-color: white;
+    background-color: #0C1E32;
     position: relative;
     margin-right: 2%;
     width: 100%;
@@ -94,12 +97,13 @@ li{
 
 
 .login-contents{
-    
-    border-radius: 0px 5px 5px 0px ;
+    transition: 0.5s;
+    border-radius: 5px;
     position: relative;
     width: 30%;
     padding: 5%;
-    background-color: #fff;
+    background-color: #06223f;
+    box-shadow: 0px 0px 1px #215b94;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,6 +111,9 @@ li{
     row-gap: 1.5rem;
 }
 
+.login-contents:hover {
+    box-shadow: 0px 0px 2px #215b94;
+}
 
 .error-text{
     color: #721c24;
@@ -132,19 +139,24 @@ li{
     height: 45px;
     border: none;
     border-radius: 30px;
-    background: #C9E0F7;
+    background: #062c58;
     outline: none;
-    color: #2A6FB5;
+    color: #96bade;
     font-size: 0.9rem;
     padding: 0 0 0 45px;
 }
-
+.input-field i {
+    color: #96bade;
+}
+.input-field input::placeholder{
+    color:#96bade;
+}
 .input-field #eye1{
     position: absolute;
     right: 17px;
     top: 38%;
     font-size: 1rem;
-    color: #667C92;
+    color: #96bade;
     cursor: pointer;
     transform: translateY(-50%);
 }
@@ -154,13 +166,13 @@ li{
     right: 17px;
     top: 38%;
     font-size: 1rem;
-    color: #667C92;
+    color:  #96bade;
     cursor: pointer;
     transform: translateY(-50%);
 }
 
 .input-field #eye1.active::before{
-    color: #333;
+    color: #2a547f;
     content: "\f06e";
 }
 
@@ -203,7 +215,7 @@ li{
     left: 17px;
     font-size: 1rem;
     width: fit-content;
-    color: #2A6FB5;
+    color: #598abb;
 }
 
 ::-webkit-input-placeholder{
@@ -218,30 +230,30 @@ li{
     display: flex;
     font-size: small;
     justify-content: flex-end;
+    
 }
-
 label a{
     text-decoration: none;
-    color: #2A6FB5;
+    color: #488ed3;
 }
 
 label a:hover{
-    color:#0C1E32;
+    color: #96bade;
 }
 
 .cta{
     width: 100%;
     height: 45px;
-    background: #2A6FB5;
-    color: #F5EE33;
+    background: #195794;
+    color: #96cbff;
     outline: none;
     border: none;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: bolder;
     letter-spacing: 0.2rem;
     font-size: 0.8rem;
     transition: all 0.3s ease;
-    margin-top: 10px;
+
 }
 
 .cta:hover{
@@ -272,15 +284,20 @@ label a:hover{
     justify-content: space-between;
     align-items: center;
 }
-
+.sign p {
+    color:#96bade;
+}
 .create{
     padding: 0 0.3rem;
     font-size: 0.8rem;
     margin-bottom: 0;
 }
+.create:hover{
+    color:#96bade;
+}
 
 .sign a{
-    color: #2A6FB5;
+    color: #488ed3;
 }
 
 /*desktop resolution (4:3, 16:9)*/
