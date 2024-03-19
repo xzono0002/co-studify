@@ -83,7 +83,7 @@ require_once "../php/function-class/login_acc.php";
 
                 <div class="sign">
                     <p class="create">Don't have an account?</p>
-                    <a href="../php/signup.php" class="create">Signup</a>
+                    <a href="../php/signup.php" class="create">Signup here.</a>
                 </div>
             </form>
         </section>
